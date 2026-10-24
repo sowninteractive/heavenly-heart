@@ -120,7 +120,7 @@
   }
 
   .animate-float {
-    animation: float 6s ease-in-out infinite;
+    animation: float 2s ease-in-out infinite;
   }
 
   .animate-sparkle {
