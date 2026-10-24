@@ -153,25 +153,25 @@
   /* Glassmorphism utilities */
   .glass {
     background: rgba(255, 255, 255, 0.45);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   }
 
   .glass-dark {
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   }
 
   .glass-card {
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
   }
 
@@ -194,6 +194,49 @@
   .font-display { font-family: 'Fredoka', 'Quicksand', system-ui, sans-serif; }
   .font-body { font-family: 'Nunito', system-ui, sans-serif; }
   .font-cute { font-family: 'Quicksand', system-ui, sans-serif; }
+
+  /* Quote card enhancements */
+  .quote-card {
+    position: relative;
+    padding-top: 2rem;
+  }
+
+  .quote-card::before {
+    content: '\\201C';
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    font-size: 4rem;
+    font-family: 'Fredoka', system-ui, sans-serif;
+    color: rgba(255, 182, 193, 0.3);
+    line-height: 1;
+    z-index: 0;
+  }
+
+  .quote-text {
+    position: relative;
+    z-index: 1;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+  }
+
+  /* Enhanced card hover effects */
+  .quote-card-hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 0 30px rgba(255, 182, 193, 0.3);
+  }
+
+  /* Background mesh animation */
+  .bg-mesh {
+    background-size: 400% 400%;
+    animation: meshGradient 20s ease infinite;
+  }
+
+  @keyframes meshGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
 }
 
 @keyframes float {
