@@ -329,17 +329,16 @@ const JesusQuotesPage = () => {
 
       {/* Categorized Wisdom Grid */}
       <section className="mt-20 w-full max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pb-20">
-        {category === 'all' ? allQuotes : 
-          category === 'peace' ? peaceQuotes 
-          : category === 'strength' ? strengthQuotes 
-          : loveQuotes
-        }.map((quote, index) => (
-          <QuoteCard
-            key={index}
-            quote={quote}
-            category={category === 'all' ? 'All Moods' : category}
-          />
-        ))}
+        {(() => {
+          const quotes = category === 'all' ? allQuotes : category === 'peace' ? peaceQuotes : category === 'strength' ? strengthQuotes : loveQuotes;
+          return quotes.map((quote, index) => (
+            <QuoteCard
+              key={index}
+              quote={quote}
+              category={category === 'all' ? 'All Moods' : category}
+            />
+          ));
+        })()}
       </section>
 
       {/* Lofi Ambient Widget - Floating in corner */}
