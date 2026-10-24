@@ -1,1 +1,1 @@
-# Welcome to your Dyad app
+# Dedicated to Jesus
